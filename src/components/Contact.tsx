@@ -6,10 +6,10 @@ import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-glow">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-glow text-foreground">
             Let's Work Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

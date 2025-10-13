@@ -29,7 +29,7 @@ function App() {
         </section>
       </main>
       
-      <footer className="py-8 text-center text-muted-foreground border-t border-border/50">
+      <footer className="py-8 text-center text-muted-foreground border-t bg-background border-border/50">
         <p>&copy; 2024 Frontend Developer. Built with React & TypeScript.</p>
       </footer>
     </div>
