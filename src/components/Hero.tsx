@@ -5,25 +5,17 @@ import heroImage from "../assets/hero-image.jpg";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
+
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
-      {/* Overlay */}
       <div className="absolute inset-0 bg-background/80" />
-      
-      {/* Floating Shapes */}
-      <div className="floating-shape w-32 h-32 bg-primary top-20 left-20" style={{ animationDelay: '0s' }} />
-      <div className="floating-shape w-20 h-20 bg-accent top-40 right-32" style={{ animationDelay: '2s' }} />
-      <div className="floating-shape w-16 h-16 bg-primary top-60 left-1/3" style={{ animationDelay: '4s' }} />
-      
-      {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow text-foreground">
-            Frontend
+            Web
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Developer</span>
           </h1>
           
