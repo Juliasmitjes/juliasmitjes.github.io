@@ -3,6 +3,18 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "../assets/hero-image.jpg";
 
 const Hero = () => {
+
+ const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
+
+
   return (
    <section className="relative min-h-screen overflow-hidden bg-background text-foreground">
       {/* Background layers */}
@@ -32,10 +44,12 @@ const Hero = () => {
       </p>
 
       <div className="flex flex-wrap gap-4">
-        <Button size="lg" className="bg-primary hover:bg-primary/80">
+        <Button size="lg" className="bg-primary hover:bg-primary/80"
+        onClick={() => scrollToSection("projects")}>
           View My Work
         </Button>
-        <Button variant="outline" size="lg">
+        <Button variant="outline" size="lg"
+        onClick={() => scrollToSection("contact")}>
           Get In Touch
         </Button>
       </div>

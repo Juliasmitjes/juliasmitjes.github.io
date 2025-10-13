@@ -1,6 +1,6 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Code, Palette, Smartphone, Zap } from "lucide-react";
+import { Code, Palette, Zap, Database  } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -17,7 +17,7 @@ const Skills = () => {
       skills: ["Figma", "Canva", "UI/UX Design"]
     },
     {
-      icon: Smartphone,
+      icon: Database,
       title: "Data Oriented",
       description: "Optimizing performance through data-driven insights",
       skills: ["Stata", "Pandas", "PostgreSQL"]
@@ -31,42 +31,69 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-glow">
-            Skills & Expertise
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            My toolkit for creating modern web experiences.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:scale-105 transition-all duration-300">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="skill-gradient p-3 rounded-lg">
-                  <category.icon size={24} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-start">{category.title}</h3>
-                  <p className="text-muted-foreground text-sm">{category.description}</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <Badge key={skillIndex} variant="secondary" className="text-xs">
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+   <section className="relative py-24 px-6 overflow-hidden bg-background">
+  {/* Decorative background elements */}
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-b from-primary/10 to-transparent rounded-full blur-3xl opacity-30" />
+    <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl opacity-20" />
+  </div>
+
+  <div className="relative z-10 max-w-6xl mx-auto">
+    {/* Header */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-glow">
+        Skills & Expertise
+      </h2>
+  
+      <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+        My toolkit for crafting modern web experiences.
+      </p>
+    </div>
+
+    {/* Skill grid */}
+    <div className="grid sm:grid-cols-2 gap-10">
+      {skillCategories.map((category, index) => (
+        <Card
+          key={index}
+          className={`
+            group relative p-6 bg-card/50 border border-border/40 backdrop-blur-sm
+            transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-primary/60
+          `}
+        >
+          {/* Glow effect on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/10 to-accent/10 blur-xl rounded-3xl" />
+
+          <div className="relative flex items-start gap-4 mb-5">
+            <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-accent text-white shadow-md">
+              <category.icon size={26} />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-1 text-foreground text-start">
+                {category.title}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {category.description}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2 mt-4">
+            {category.skills.map((skill, skillIndex) => (
+              <Badge
+                key={skillIndex}
+                variant="secondary"
+                className="text-xs px-2 py-1 bg-foreground/5 hover:bg-primary/20 transition"
+              >
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 

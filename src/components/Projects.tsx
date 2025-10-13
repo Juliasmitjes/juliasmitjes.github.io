@@ -40,7 +40,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-backgroundTwo">
+    <section id="projects" className="py-20 px-4 bg-backgroundTwo">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-foreground font-bold mb-4 text-glow">
