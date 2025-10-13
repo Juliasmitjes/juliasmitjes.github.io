@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
+/* gradients */
+
+.gradient-hero {
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--hero-gradient-start)) 0%,
+    hsl(var(--hero-gradient-end)) 100%
+  );
+}
+
+.gradient-skill {
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--skill-gradient-start)) 0%,
+    hsl(var(--skill-gradient-end)) 100%
+  );
+}
+
+.project-hover {
+  background-color: hsl(var(--project-hover));
+}
+
+.text-glow {
+  text-shadow: 0 0 8px hsl(var(--text-glow));
+}
+
+
+/* radius */
+
+.rounded-custom {
+  border-radius: var(--radius);
+}
+
+/* sidebar */
+
+.sidebar {
+  background-color: hsl(var(--sidebar-background));
+  color: hsl(var(--sidebar-foreground));
+  border: 1px solid hsl(var(--sidebar-border));
+}
+
+.sidebar-primary {
+  background-color: hsl(var(--sidebar-primary));
+  color: hsl(var(--sidebar-primary-foreground));
+}
+
+.sidebar-accent {
+  background-color: hsl(var(--sidebar-accent));
+  color: hsl(var(--sidebar-accent-foreground));
+}
+
+.sidebar-ring {
+  box-shadow: 0 0 0 2px hsl(var(--sidebar-ring));
+}
+
 
 @layer base {
   :root {
@@ -97,6 +152,53 @@
   }
 }
 
+
+@theme inline {
+--color-background: hsl(var(--background));
+--color-foreground: hsl(var(--foreground));
+
+--color-card: hsl(var(--card));
+--color-card-foreground: hsl(var(--card-foreground));
+
+--color-popover: hsl(var(--popover));
+--color-popover-foreground: hsl(var(--popover-foreground));
+
+--color-primary: hsl(var(--primary));
+--color-primary-foreground: hsl(var(--primary-foreground));
+
+--color-secondary: hsl(var(--secondary));
+--color-secondary-foreground: hsl(var(--secondary-foreground));
+
+--color-muted: hsl(var(--muted));
+--color-muted-foreground: hsl(var(--muted-foreground));
+
+--color-accent: hsl(var(--accent));
+--color-accent-foreground: hsl(var(--accent-foreground));
+
+--color-destructive: hsl(var(--destructive));
+--color-destructive-foreground: hsl(var(--destructive-foreground));
+
+--color-border: hsl(var(--border));
+--color-input: hsl(var(--input));
+--color-ring: hsl(var(--ring));
+
+/* Portfolio specific colors */
+--color-hero-gradient-start: hsl(var(--hero-gradient-start));
+--color-hero-gradient-end: hsl(var(--hero-gradient-end));
+--color-skill-gradient-start: hsl(var(--skill-gradient-start));
+--color-skill-gradient-end: hsl(var(--skill-gradient-end));
+--color-project-hover: hsl(var(--project-hover));
+--color-text-glow: hsl(var(--text-glow));
+
+--color-sidebar-background: hsl(var(--sidebar-background));
+--color-sidebar-foreground: hsl(var(--sidebar-foreground));
+--color-sidebar-primary: hsl(var(--sidebar-primary));
+--color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+--color-sidebar-accent: hsl(var(--sidebar-accent));
+--color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+--color-sidebar-border: hsl(var(--sidebar-border));
+--color-sidebar-ring: hsl(var(--sidebar-ring));
+}
 
 
 @layer components {
