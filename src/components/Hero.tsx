@@ -4,49 +4,61 @@ import heroImage from "../assets/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+   <section className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      {/* Background layers */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      
-      <div className="absolute inset-0 bg-background/80" />
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow text-foreground">
-            Web
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Developer</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Crafting beautiful, interactive web experiences with modern technologies. 
-            Passionate about clean code and user-centered design.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/80">
-              View My Work
-            </Button>
-            <Button variant="outline" size="lg">
-              Get In Touch
-            </Button>
-          </div>
-          
-          <div className="flex justify-center gap-6">
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
-              <Github size={24} />
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
-              <Linkedin size={24} />
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
-              <Mail size={24} />
-            </a>
-          </div>
-        </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-transparent" />
+
+        {/* Content layout */}
+        <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-between gap-16 px-6 py-32">
+
+          {/* Left column — text */}
+          <div className="flex-1 text-left animate-fade-in">
+            <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">
+              Hi, I’m Julia — 
+            </p>
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+              Bringing
+              <br />
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> design and code  </span> together.
+              <br /> 
+            </h1>         
+
+      <p className="text-lg text-muted-foreground mb-8 max-w-lg">
+        I light up around good ideas and great people. From designing systems to debugging code, I'm all about mixing tech with taste.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        <Button size="lg" className="bg-primary hover:bg-primary/80">
+          View My Work
+        </Button>
+        <Button variant="outline" size="lg">
+          Get In Touch
+        </Button>
       </div>
-    </section>
+
+      <div className="flex gap-6 mt-10">
+        <a href="#" className="hover:text-primary transition-colors"><Github size={22} /></a>
+        <a href="#" className="hover:text-primary transition-colors"><Linkedin size={22} /></a>
+        <a href="#" className="hover:text-primary transition-colors"><Mail size={22} /></a>
+      </div>
+    </div>
+
+    {/* Right column — visual / animation */}
+    <div className="flex-1 relative">
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      <img
+        src={heroImage}
+        alt="developer at work"
+        className="rounded-3xl shadow-2xl w-full h-auto object-cover animate-float-slow"
+      />
+    </div>
+  </div>
+</section>
+
   );
 };
 
