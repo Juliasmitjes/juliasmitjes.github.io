@@ -6,27 +6,27 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: Code,
-      title: "Frontend Development",
+      title: "Web Development",
       description: "Building responsive and interactive user interfaces",
-      skills: ["React", "TypeScript", "Vue.js", "Next.js", "Tailwind CSS"]
+      skills: ["React", "TypeScript", "Angular", "Next.js", "Tailwind CSS", "Vite"]
     },
     {
       icon: Palette,
       title: "Design & UX",
-      description: "Creating beautiful and intuitive user experiences", 
-      skills: ["Figma", "Adobe XD", "UI/UX Design", "Prototyping", "Wireframing"]
+      description: "Creating beautiful user experiences", 
+      skills: ["Figma", "Canva", "UI/UX Design"]
     },
     {
       icon: Smartphone,
-      title: "Mobile & Responsive",
-      description: "Ensuring seamless experiences across all devices",
-      skills: ["Responsive Design", "PWA", "Mobile-First", "Cross-Browser", "Performance"]
+      title: "Data Oriented",
+      description: "Optimizing performance through data-driven insights",
+      skills: ["Stata", "Pandas", "PostgreSQL"]
     },
     {
       icon: Zap,
-      title: "Tools & Optimization",
-      description: "Leveraging modern tools for efficient development",
-      skills: ["Vite", "Webpack", "Git", "Testing", "CI/CD"]
+      title: "Marketing & Automation",
+      description: "Enhancing marketing efficiency with intelligent automation.",
+      skills: ["HubSpot", "Jira", "Hootsuite" ]
     }
   ];
 
@@ -38,7 +38,7 @@ const Skills = () => {
             Skills & Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern web applications
+            My toolkit for creating modern web experiences.
           </p>
         </div>
         
