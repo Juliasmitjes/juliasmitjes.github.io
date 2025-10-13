@@ -19,7 +19,6 @@ const Navigation = () => {
     { label: "Home", href: "#home" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -37,7 +36,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            WebDev.
+            HIERKOMTEENLOGO
           </div>
           
           {/* Desktop Navigation */}
@@ -52,7 +51,7 @@ const Navigation = () => {
               </button>
             ))}
             <Button size="sm" className="bg-primary hover:bg-primary/80">
-              Hire Me
+              Hire me
             </Button>
           </div>
           
@@ -82,7 +81,7 @@ const Navigation = () => {
               ))}
               <div className="px-4">
                 <Button size="sm" className="w-full bg-primary hover:bg-primary/80">
-                  Hire Me
+                  Hire me
                 </Button>
               </div>
             </div>
