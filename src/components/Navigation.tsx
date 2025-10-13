@@ -46,7 +46,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors"
+                className="text-foreground cursor-pointer hover:text-primary transition-colors"
               >
                 {item.label}
               </button>

@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "../assets/hero-image.jpg";
 
 const Hero = () => {
@@ -22,7 +22,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow text-foreground">
             Frontend
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Developer</span>
           </h1>
@@ -52,10 +52,6 @@ const Hero = () => {
               <Mail size={24} />
             </a>
           </div>
-        </div>
-        
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown size={32} className="text-muted-foreground" />
         </div>
       </div>
     </section>

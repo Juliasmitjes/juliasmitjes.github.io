@@ -11,8 +11,8 @@ function App() {
     <div className="min-h-screen">
       <Navigation />
       
-      <main>
-        <section id="home">
+      <main >
+        <section id="home" >
           <Hero />
         </section>
         

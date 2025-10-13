@@ -31,10 +31,10 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-glow">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-glow">
             Skills & Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ const Skills = () => {
                   <category.icon size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-start">{category.title}</h3>
                   <p className="text-muted-foreground text-sm">{category.description}</p>
                 </div>
               </div>
