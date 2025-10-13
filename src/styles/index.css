@@ -59,6 +59,7 @@
 @layer base {
   :root {
     --background: 240 10% 3.9%;
+    --backgroundTwo: 227 22% 8%;
     --foreground: 0 0% 98%;
 
     --card: 240 10% 7%;
@@ -117,6 +118,7 @@
 
 @theme inline {
 --color-background: hsl(var(--background));
+--color-backgroundTwo: hsl(var(--backgroundTwo));
 --color-foreground: hsl(var(--foreground));
 
 --color-card: hsl(var(--card));
