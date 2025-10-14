@@ -2,16 +2,17 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import websiteLicht from "../assets/websiteLicht.jpg";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Website",
-      description: "A modern admin dashboard for managing online stores with real-time analytics and inventory management.",
-      technologies: ["React", "TypeScript", "Tailwind", "Chart.js"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop",
-      demoUrl: "#",
-      githubUrl: "#"
+      title: "Art Website",
+      description: "A modern website for an art brand, featuring product listings, a contact form, and the ability to place orders.",
+      technologies: ["Next.js", "TypeScript", "Tailwind", "React", "PostgreSQL"],
+      image: websiteLicht,
+      demoUrl: "https://lichtsculpturen.vercel.app/",
+      githubUrl: "https://github.com/Juliasmitjes/12-websitenextgoede"
     },
     {
       title: "Task Management App",
@@ -58,10 +59,10 @@ const Projects = () => {
       {projects.map((project, index) => (
         <article
           key={index}
-          className="group relative overflow-hidden rounded-2xl p-0 shadow-lg transition-transform duration-500 hover:-translate-y-2"
+          className="group relative overflow-hidden rounded-2xl p-0 shadow-lg transition-transform duration-500 hover:-translate-y-2 text-start"
           aria-labelledby={`proj-${index}-title`}
         >
-          {/* gradient frame */}
+     
           <div className="rounded-2xl bg-gradient-to-tr from-primary/5 via-transparent to-accent/5 p-[1px]">
             <Card className="relative overflow-hidden rounded-2xl bg-card/60 backdrop-blur-sm border border-border/40 p-0">
               <div className="md:flex">
@@ -70,20 +71,21 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-[10%] transform transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* dark gradient */}
+        
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
 
                  
 
-                  {/* subtle reveal meta on hover */}
                   <div className="absolute left-0 right-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-in-out">
                     <div className="backdrop-blur-sm bg-background/60 p-3 flex items-center justify-between">
                       <div className="text-xs text-muted-foreground">
                         <div className="font-medium text-foreground">{project.title}</div>
                       </div>
-                      <div className="text-xs text-muted-foreground">View →</div>
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground">
+                          View →
+                        </a>
                     </div>
                   </div>
                 </div>
