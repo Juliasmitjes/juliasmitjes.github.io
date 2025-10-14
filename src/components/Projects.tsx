@@ -41,16 +41,13 @@ const Projects = () => {
 
   return (
     <section id="projects" className="relative py-24 px-4 bg-backgroundTwo overflow-hidden">
-  {/* Decorative blobs */}
-  <div className="pointer-events-none absolute -left-32 -top-20 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-primary/10 to-transparent blur-3xl opacity-40" />
-  <div className="pointer-events-none absolute -right-28 bottom-10 w-[360px] h-[360px] rounded-full bg-gradient-to-tr from-accent/8 to-transparent blur-2xl opacity-30" />
 
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-12">
-      <h2 className="text-4xl md:text-5xl text-foreground font-bold mb-3 text-glow">
+      <h2 className="text-4xl md:text-5xl text-foreground font-bold mb-6 text-glow">
         Creations
       </h2>
-      <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto mb-6 rounded-full" />
+
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
         A curated showcase of recent work — visual, interactive, and engineered for impact.
       </p>
@@ -84,8 +81,7 @@ const Projects = () => {
                   <div className="absolute left-0 right-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-in-out">
                     <div className="backdrop-blur-sm bg-background/60 p-3 flex items-center justify-between">
                       <div className="text-xs text-muted-foreground">
-                        <div className="font-medium text-foreground">{project.company ?? project.title}</div>
-                        <div>{project.type ?? "Personal Project"}</div>
+                        <div className="font-medium text-foreground">{project.title}</div>
                       </div>
                       <div className="text-xs text-muted-foreground">View →</div>
                     </div>

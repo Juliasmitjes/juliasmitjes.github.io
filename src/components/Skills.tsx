@@ -19,7 +19,7 @@ const Skills = () => {
     },
     {
       icon: Database,
-      title: "Data Oriented",
+      title: "Data Analysis",
       description: "Optimizing performance through data-driven insights",
       skills: ["Stata", "Pandas", "PostgreSQL"]
     },
