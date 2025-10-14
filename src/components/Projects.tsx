@@ -15,10 +15,10 @@ const Projects = () => {
       githubUrl: "https://github.com/Juliasmitjes/12-websitenextgoede"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, team chat, and progress tracking.",
-      technologies: ["Vue.js", "Node.js", "Socket.io", "MongoDB"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=300&fit=crop",
+      title: "Website Builder Tool",
+      description: "A web app that lets users design and build websites in six easy steps.",
+      technologies: ["Angular", "TypeScript", "Tailwind", "Vite"],
+      image: "",
       demoUrl: "#",
       githubUrl: "#"
     },
