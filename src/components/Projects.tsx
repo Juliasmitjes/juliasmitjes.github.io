@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "Art Website",
       description: "A modern website for an art brand, featuring product listings, a contact form, and the ability to place orders.",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "React", "PostgreSQL"],
+      technologies: ["Next.js", "TypeScript", "Tailwind", "React", "PostgreSQL", "Vercel"],
       image: websiteLicht,
       demoUrl: "https://lichtsculpturen.vercel.app/",
       githubUrl: "https://github.com/Juliasmitjes/12-websitenextgoede"
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "Website Builder Tool",
       description: "A web app that lets users design and build websites in six easy steps.",
-      technologies: ["Angular", "TypeScript", "Tailwind", "Vite"],
+      technologies: ["Angular", "TypeScript", "Tailwind", "Vite", "Vercel"],
       image: "",
       demoUrl: "#",
       githubUrl: "#"
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: "Weather App",
       description: "Beautiful weather application with location-based forecasts and interactive maps.",
-      technologies: ["React", "Weather API", "Maps API" ],
+      technologies: ["Vue.js", "Weather API", "Maps API" ],
       image: "",
       demoUrl: "#",
       githubUrl: "#"
