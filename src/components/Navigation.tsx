@@ -29,6 +29,8 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border/50" : ""
@@ -50,7 +52,10 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <Button size="sm" className="bg-primary hover:bg-primary/80">
+            <Button 
+            size="sm"  
+            onClick={() => scrollToSection("#contact")}
+            className="bg-primary hover:bg-primary/80">
               Hire me
             </Button>
           </div>
