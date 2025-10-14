@@ -23,18 +23,18 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      title: "Portfolio Website",
-      description: "Custom portfolio website with smooth animations, dark mode, and responsive design.",
+      title: "Games Hub",
+      description: "A platform to discover and play web-based games, complete with user reviews and ratings.",
       technologies: ["Next.js", "Framer Motion", "SCSS", "Vercel"],
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=300&fit=crop",
+      image: "",
       demoUrl: "#",
       githubUrl: "#"
     },
     {
       title: "Weather App",
       description: "Beautiful weather application with location-based forecasts and interactive maps.",
-      technologies: ["React", "Weather API", "Maps API", "PWA"],
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=300&fit=crop",
+      technologies: ["React", "Weather API", "Maps API" ],
+      image: "",
       demoUrl: "#",
       githubUrl: "#"
     }
