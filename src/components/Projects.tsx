@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: "Art Website",
       description: "A modern website for an art brand, featuring product listings, a contact form, and the ability to place orders.",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "React", "PostgreSQL", "Vercel"],
+      technologies: ["Next.js", "Typescript", "Tailwind", "React", "PostgreSQL", "Vercel"],
       image: websiteLicht,
       adjustObject: true,
       demoUrl: "https://lichtsculpturen.vercel.app/",
@@ -19,7 +19,7 @@ const Projects = () => {
     {
       title: "Website Builder Tool",
       description: "A web app that lets users design and build websites in six easy steps.",
-      technologies: ["Angular", "TypeScript", "Tailwind", "Vite", "Vercel"],
+      technologies: ["Angular", "Typescript", "Tailwind", "Vite", "Vercel"],
       image: "",
       demoUrl: "#",
       githubUrl: "#"
@@ -27,7 +27,7 @@ const Projects = () => {
     {
       title: "Games Hub",
       description: "A platform to discover and play web-based games, complete with user reviews and ratings.",
-      technologies: ["Next.js", "Framer Motion", "SCSS", "Vercel"],
+      technologies: ["Vite", "React", "Typescript"],
       image: "",
       demoUrl: "#",
       githubUrl: "#"
