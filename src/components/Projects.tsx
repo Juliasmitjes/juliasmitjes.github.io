@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import websiteLicht from "../assets/websiteLicht.jpg";
+import websiteWeer from "../assets/websiteWeer.png";
 
 const Projects = () => {
   const projects = [
@@ -11,6 +12,7 @@ const Projects = () => {
       description: "A modern website for an art brand, featuring product listings, a contact form, and the ability to place orders.",
       technologies: ["Next.js", "TypeScript", "Tailwind", "React", "PostgreSQL", "Vercel"],
       image: websiteLicht,
+      adjustObject: true,
       demoUrl: "https://lichtsculpturen.vercel.app/",
       githubUrl: "https://github.com/Juliasmitjes/12-websitenextgoede"
     },
@@ -32,11 +34,12 @@ const Projects = () => {
     },
     {
       title: "Weather App",
-      description: "Beautiful weather application with location-based forecasts and interactive maps.",
-      technologies: ["Vue.js", "Weather API", "Maps API" ],
-      image: "",
-      demoUrl: "#",
-      githubUrl: "#"
+      description: "Weather application with location-based updates.",
+      technologies: ["Vue.js", "Weather API", "Vite" ],
+      image: websiteWeer,
+      adjustObject: false,
+      demoUrl: "https://juliasmitjes.github.io/weather-app/",
+      githubUrl: "https://github.com/Juliasmitjes/weather-app"
     }
   ];
 
@@ -71,8 +74,8 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-[10%] transform transition-transform duration-500 group-hover:scale-105"
-                  />
+                    className={`w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105 ${
+                      project.adjustObject ? "object-[10%]" : ""}`} />
         
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
 
