@@ -1,6 +1,7 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Code, Palette, Zap, Database  } from "lucide-react";
+import { motion } from 'motion/react';
 
 const Skills = () => {
   const skillCategories = [
@@ -46,21 +47,27 @@ const Skills = () => {
       </h2>
   
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-        My toolkit for crafting modern web experiences.
+        My toolkit for creating modern websites.
       </p>
     </div>
 
     {/* Skill grid */}
     <div className="grid sm:grid-cols-2 gap-10">
-      {skillCategories.map((category, index) => (
-        <Card
-          key={index}
-          className={`
-            group relative p-6 bg-card/50 border border-border/40 backdrop-blur-sm
-            transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-primary/60
-          `}
-        >
-          {/* Glow effect on hover */}
+      {skillCategories.map((category, index) => {
+        const isLeftColumn = index % 2 === 0;
+        return (
+              <motion.div
+            key={index}
+            initial={{ x: isLeftColumn ? -100 : 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.0 }}
+          >
+            <Card
+              className={`group relative p-6 bg-card/50 border border-border/40 backdrop-blur-sm
+                transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-primary/60`}
+            >
+              {/* Glow effect on hover */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/10 to-accent/10 blur-xl rounded-3xl" />
 
           <div className="relative flex items-start gap-4 mb-5">
@@ -89,11 +96,12 @@ const Skills = () => {
             ))}
           </div>
         </Card>
-      ))}
+        </motion.div>
+        )}   
+      )}
     </div>
   </div>
 </section>
-
   );
 };
 

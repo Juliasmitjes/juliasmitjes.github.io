@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Test from '../components/Test';
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
         
         <section id="contact">
           <Contact />
+        </section>
+
+        <section >
+          <Test />
         </section>
       </main>
       
