@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
@@ -93,7 +93,7 @@ export default function Contact() {
                   </Button>
 
                   <div className="text-sm text-muted-foreground">
-                    <div>Typical reply within <strong>48 hours</strong></div>
+                    <div>Thank you! I'll reply in <strong>48 hours</strong></div>
                   </div>
                 </div>
 
@@ -124,7 +124,7 @@ export default function Contact() {
                 </div>
 
                 <h3 className="text-lg font-semibold mb-2">Julia Smitjes</h3>
-                <p className="text-sm text-muted-foreground mb-4">Web developer — Utrecht</p>
+                <p className="text-sm text-muted-foreground mb-4">IT lover and coffee addict — Utrecht</p>
 
                 <div className="w-full divide-y divide-border/30">
                   <div className="py-3 flex items-center justify-between">
@@ -164,13 +164,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </Card>
-
-            {/* Simplified CTA section */}
-            <Card className="mt-6 p-5 bg-card/50 backdrop-blur-sm border border-border/15 text-center">
-              <h4 className="font-semibold mb-1">Let's connect</h4>
-              <p className="text-sm text-muted-foreground mb-4">Interested in working together or have questions? Let's talk.</p>
-              <Button className="px-5 py-2 w-full">Schedule a call</Button>
             </Card>
           </motion.aside>
         </div>

@@ -7,6 +7,8 @@ import Contact from "../components/Contact";
 
 
 function App() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -31,7 +33,7 @@ function App() {
       </main>
       
       <footer className="py-8 text-center text-muted-foreground border-t bg-background border-border/50">
-        <p>&copy; 2024 Frontend Developer. Built with React & TypeScript.</p>
+        <p>&copy; {currentYear} Built with React & TypeScript.</p>
       </footer>
     </div>
   );

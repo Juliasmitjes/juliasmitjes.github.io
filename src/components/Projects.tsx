@@ -4,13 +4,14 @@ import { Badge } from "./ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import websiteLicht from "../assets/websiteLicht.jpg";
 import websiteWeer from "../assets/websiteWeer.png";
+import websiteGame from "../assets/websiteGame.png";
 
 const Projects = () => {
   const projects = [
     {
       title: "Art Website",
       description: "A modern website for an art brand, featuring product listings, a contact form, and the ability to place orders.",
-      technologies: ["Next.js", "Typescript", "Tailwind", "React", "PostgreSQL", "Vercel"],
+      technologies: ["React", "Next.js", "Typescript", "Tailwind", "Vercel", "PostgreSQL" ],
       image: websiteLicht,
       adjustObject: true,
       demoUrl: "https://lichtsculpturen.vercel.app/",
@@ -18,24 +19,25 @@ const Projects = () => {
     },
     {
       title: "Website Builder Tool",
-      description: "A web app that lets users design and build websites in six easy steps.",
-      technologies: ["Angular", "Typescript", "Tailwind", "Vite", "Vercel"],
+      description: "A web app that helps users design and build websites in six easy steps.",
+      technologies: ["Angular", "Vite", "Typescript", "Tailwind", "Vercel"],
       image: "",
       demoUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Games Hub",
+      title: "Game Hub",
       description: "A platform to discover and play web-based games, complete with user reviews and ratings.",
-      technologies: ["Vite", "React", "Typescript"],
-      image: "",
-      demoUrl: "#",
-      githubUrl: "#"
+      technologies: ["React", "Vite", "Typescript", "Tailwind"],
+      image: websiteGame,
+      adjustObject: false,
+      demoUrl: "https://juliasmitjes.github.io/game-hub/#/",
+      githubUrl: "https://github.com/Juliasmitjes/game-hub"
     },
     {
       title: "Weather App",
       description: "Weather application with location-based updates.",
-      technologies: ["Vue.js", "Weather API", "Vite" ],
+      technologies: ["Vue.js", "Vite", "Typescript", "Tailwind",  "Weather API", ],
       image: websiteWeer,
       adjustObject: false,
       demoUrl: "https://juliasmitjes.github.io/weather-app/",
