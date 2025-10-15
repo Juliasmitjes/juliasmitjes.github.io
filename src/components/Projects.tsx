@@ -51,11 +51,11 @@ const Projects = () => {
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-12">
       <h2 className="text-4xl md:text-5xl text-foreground font-bold mb-6 text-glow">
-        Creations
+        Recent Creations
       </h2>
 
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-        A curated showcase of recent work — visual, interactive, and engineered for impact.
+        A curated showcase of recent work. User-friendly, interactive, and modern.
       </p>
     </div>
 
