@@ -79,14 +79,15 @@ const Hero = () => {
         </div>
       </div>
 
-    <div className="flex-1 relative">
+    <div className="flex-1 relative hidden sm:block">
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       <img
         src={heroImage}
-        alt="developer at work"
+        alt="abstract"
         className="rounded-3xl shadow-2xl w-full h-auto object-cover animate-float-slow"
       />
     </div>
+
   </div>
 </section>
   );
