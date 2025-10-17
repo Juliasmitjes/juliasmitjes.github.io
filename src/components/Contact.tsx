@@ -22,22 +22,6 @@ export default function Contact() {
       setSending(false);
       setTimeout(() => setSent(false), 3500);
     }
-
-    // dit nog doen!! 
-    const contactInfo = [
-      {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: "julia.s@live.nl",
-      href: "mailto:julia.s@live.nl"
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Telefoonnummer", 
-      details: "0614292489",
-      href: "tel:+31614292489"
-    },
-    ]
   };
 
   return (
@@ -57,7 +41,8 @@ export default function Contact() {
         </motion.header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* LEFT: Form */}
+
+
           <motion.div
             initial={{ opacity: 0, x: -12 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -126,17 +111,42 @@ export default function Contact() {
                 <p className="text-sm text-muted-foreground mb-4">IT lover and coffee addict</p>
 
                 <div className="w-full divide-y divide-border/30">
-                  <div className="py-3 flex items-center justify-between">
+
+                 <div className="py-3 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <Mail size={18} className="text-primary" />
-                      <a className="text-sm" href="mailto:julia.s@live.nl">julia.s@live.nl</a>
+                      <a
+                        href="mailto:julia.s@live.nl"
+                        className="text-primary hover:text-primary/80 transition-colors"
+                      >
+                        <Mail size={18} />
+                      </a>
+                      <a
+                        href="mailto:julia.s@live.nl"
+                        className="text-sm hover:text-primary/80 transition-colors"
+                      >
+                        julia.s@live.nl
+                      </a>
                     </div>
                   </div>
 
                   <div className="py-3 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <MapPin size={18} className="text-primary" />
-                      <span className="text-sm">Utrecht, NL</span>
+                      <a
+                        href="https://www.google.com/maps?q=Utrecht,+NL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-primary/80 transition-colors"
+                      >
+                        <MapPin size={18} />
+                      </a>
+                      <a
+                        href="https://www.google.com/maps?q=Utrecht,+NL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm hover:text-primary/80 transition-colors"
+                      >
+                        Utrecht, NL
+                      </a>
                     </div>
                   </div>
 
@@ -155,7 +165,6 @@ export default function Contact() {
                     </a>
                   </div>
 
-                  {/* Updated Availability section */}
                   <div className="pt-3 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
