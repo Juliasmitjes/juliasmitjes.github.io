@@ -1,28 +1,33 @@
-import { useState } from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
 import { Github, Mail, MapPin, Phone } from "lucide-react";
 import { motion } from 'motion/react';
 import juliaSmitjes from '../assets/juliaSmitjes.jpg';
 
 export default function Contact() {
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = async (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (sending) return;
-    setSending(true);
-    try {
-      await new Promise((r) => setTimeout(r, 800));
-      setSent(true);
-    } finally {
-      setSending(false);
-      setTimeout(() => setSent(false), 3500);
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
     }
-  };
+  
 
   return (
     <section id="contact" className="py-20 px-4 bg-background text-foreground">
@@ -42,7 +47,6 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-
           <motion.div
             initial={{ opacity: 0, x: -12 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,48 +54,46 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
           >
             <Card className="p-8 bg-card/60 backdrop-blur-sm border border-border/20 shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-5">
+
+
+              <form ref={form} onSubmit={sendEmail} className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
                   <div>
                     <label htmlFor="name" className="text-sm font-medium mb-1 block">Name</label>
-                    <Input id="name" name="name" placeholder="Your name" className="bg-background/10" required />
+                    <input type="name" name="name" placeholder="Your name" className="bg-background/10" required />
                   </div>
+
                   <div>
                     <label htmlFor="email" className="text-sm font-medium mb-1 block">Email</label>
-                    <Input id="email" name="email" type="email" placeholder="you@email.com" className="bg-background/10" required />
+                    <input type="email" name="email" placeholder="you@email.com" className="bg-background/10" required />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="text-sm font-medium mb-1 block">Subject</label>
-                  <Input id="subject" name="subject" placeholder="Short project title" className="bg-background/10" />
+                  <input type="subject" name="subject" placeholder="Short project title" className="bg-background/10" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="text-sm font-medium mb-1 block">Message</label>
-                  <Textarea id="message" name="message" rows={6} placeholder="Tell me about scope, timeline & budget (optional)" className="bg-background/10" required />
+                  <textarea name="message" rows={6} placeholder="Tell me about scope, timeline & budget (optional)" className="bg-background/10" required />
                 </div>
 
                 <div className="flex items-center gap-4">
+                  <input type="sumbit" value="Submit" className="relative flex items-center justify-center px-6 py-2"/>
+
                   <Button type="submit" className="relative flex items-center justify-center px-6 py-2">
-                    {sending ? 'Sending…' : sent ? 'Sent ✓' : 'Send Message'}
+                    LALAAL
                   </Button>
 
                   <div className="text-sm text-muted-foreground">
                     <div>Thank you! I'll reply in <strong>48 hours</strong></div>
                   </div>
                 </div>
-
-                {sent && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 rounded-md bg-foreground/6 p-3 text-sm"
-                  >
-                    Thanks — I&apos;ll reply shortly. ✅
-                  </motion.div>
-                )}
               </form>
+
+
             </Card>
           </motion.div>
 
