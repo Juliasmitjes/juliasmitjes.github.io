@@ -40,7 +40,7 @@ const Skills = () => {
   </div>
 
   <div className="relative z-10 max-w-6xl mx-auto">
-    {/* Header */}
+
     <div className="text-center mb-20">
       <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-glow">
         Skills & Expertise
@@ -51,7 +51,7 @@ const Skills = () => {
       </p>
     </div>
 
-    {/* Skill grid */}
+
     <div className="grid sm:grid-cols-2 gap-10">
       {skillCategories.map((category, index) => {
         const isLeftColumn = index % 2 === 0;
@@ -67,18 +67,18 @@ const Skills = () => {
               className={`group relative p-6 bg-card/50 border border-border/40 backdrop-blur-sm
                 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-primary/60`}
             >
-              {/* Glow effect on hover */}
+
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/10 to-accent/10 blur-xl rounded-3xl" />
 
-          <div className="relative flex items-start gap-4 mb-5">
-            <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-accent text-white shadow-md">
+          <div className="relative flex items-start gap-4 mb-5 ">
+            <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-accent text-white mt-1 sm:mt-0 shadow-md">
               <category.icon size={26} />
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-1 text-foreground text-start">
                 {category.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-start text-sm leading-relaxed">
                 {category.description}
               </p>
             </div>

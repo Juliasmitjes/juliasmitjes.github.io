@@ -17,17 +17,16 @@ const Hero = () => {
 
   return (
    <section className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      {/* Background layers */}
+
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-transparent" />
 
-        {/* Content layout */}
         <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-between gap-16 px-6 py-32">
 
-          {/* Left column — text */}
+   
           <div className="flex-1 text-left animate-fade-in">
             <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-3">
               Hi, I’m Julia — 

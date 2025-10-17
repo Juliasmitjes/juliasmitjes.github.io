@@ -44,7 +44,7 @@ const Navigation = () => {
           &lt;MyPortfolio /&gt;
           </div>
           
-          {/* Desktop Navigation */}
+          {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
@@ -63,7 +63,7 @@ const Navigation = () => {
             </Button>
           </div>
           
-          {/* Mobile Menu Button */}
+          {/* Mobiel */}
           <Button
             variant="outline"
             size="sm"
@@ -74,7 +74,6 @@ const Navigation = () => {
           </Button>
         </div>
         
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-card/90 backdrop-blur-md border-t border-border/50 py-4">
             <div className="flex flex-col gap-4">
@@ -88,7 +87,9 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="px-4">
-                <Button size="sm" className="w-full bg-primary hover:bg-primary/80">
+                <Button size="sm" 
+                className="w-full bg-primary hover:bg-primary/80"
+                onClick={() => scrollToSection("#contact")}>
                   Hire me
                 </Button>
               </div>
