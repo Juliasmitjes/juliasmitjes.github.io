@@ -5,6 +5,8 @@ import { Card } from "./ui/card";
 import { Github, Mail, MapPin, Phone } from "lucide-react";
 import { motion } from 'motion/react';
 import juliaSmitjes from '../assets/juliaSmitjes.jpg';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -61,30 +63,28 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="name" className="text-sm font-medium mb-1 block">Name</label>
-                    <input type="name" name="name" placeholder="Your name" className="bg-background/10" required />
+                    <Input type="name" name="name" placeholder="Your name" className="bg-background/10" required />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="text-sm font-medium mb-1 block">Email</label>
-                    <input type="email" name="email" placeholder="you@email.com" className="bg-background/10" required />
+                    <Input type="email" name="email" placeholder="you@email.com" className="bg-background/10" required />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="text-sm font-medium mb-1 block">Subject</label>
-                  <input type="subject" name="subject" placeholder="Short project title" className="bg-background/10" />
+                  <Input type="subject" name="subject" placeholder="Short project title" className="bg-background/10" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="text-sm font-medium mb-1 block">Message</label>
-                  <textarea name="message" rows={6} placeholder="Tell me about scope, timeline & budget (optional)" className="bg-background/10" required />
+                  <Textarea name="message" rows={6} placeholder="Tell me about scope, timeline & budget (optional)" className="bg-background/10" required />
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <input type="sumbit" value="Submit" className="relative flex items-center justify-center px-6 py-2"/>
-
                   <Button type="submit" className="relative flex items-center justify-center px-6 py-2">
-                    LALAAL
+                    Submit
                   </Button>
 
                   <div className="text-sm text-muted-foreground">
