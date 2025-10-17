@@ -36,7 +36,7 @@ export default function Contact() {
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Let's work together</h2>
           <p className="mt-2 text-muted-foreground max-w-2xl mx-auto text-center">
-            Ready to bring your ideas to life? Share a brief and I&apos;ll get back within 48 hours.
+            Excited to hear about your ideas! Share your thoughts, and I&apos;ll reach out shortly
           </p>
         </motion.header>
 
