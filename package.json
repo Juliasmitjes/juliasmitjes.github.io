@@ -1,9 +1,9 @@
 {
-  "name": "13-portfoliogoede",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://juliasmitjes.github.io/13-portfoliogoede/",
+  "homepage": "https://juliasmitjes.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
