@@ -82,7 +82,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="message" className="text-sm font-medium mb-1 block">Message</label>
-                  <Textarea name="message" rows={6} placeholder="Tell me about scope, timeline & budget (optional)" className="bg-background/10" required />
+                  <Textarea name="message" rows={6} placeholder="Curious to hear what you&apos;re doing, building, or thinking about." className="bg-background/10" required />
                 </div>
 
                 <div className="flex items-center gap-4">
