@@ -5,6 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import websiteLicht from "../assets/websiteLicht.jpg";
 import websiteWeer from "../assets/websiteWeer.png";
 import websiteGame from "../assets/websiteGame.png";
+import websiteBuild from "../assets/websiteBuild.png";
 
 const Projects = () => {
   const projects = [
@@ -19,11 +20,12 @@ const Projects = () => {
     },
     {
       title: "Website Builder Tool",
-      description: "A web app that helps users design and build websites in six easy steps.",
+      description: "A web app that helps users design and build websites in five easy steps.",
       technologies: ["Angular", "Vite", "Typescript", "Tailwind", "Vercel"],
-      image: "",
-      demoUrl: "#",
-      githubUrl: "#"
+      image: websiteBuild,
+      adjustObject: true,
+      demoUrl: "https://my-app-dun-rho-17.vercel.app/",
+      githubUrl: "https://github.com/Juliasmitjes/my-app"
     },
     {
       title: "Game Hub",

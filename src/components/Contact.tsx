@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Mail, MapPin, Phone } from "lucide-react";
 import { motion } from 'motion/react';
 import juliaSmitjes from '../assets/juliaSmitjes.jpg';
 
@@ -110,7 +110,6 @@ export default function Contact() {
             </Card>
           </motion.div>
 
-          {/* RIGHT: Profile / Contact */}
           <motion.aside
             initial={{ opacity: 0, x: 12 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -124,7 +123,7 @@ export default function Contact() {
                 </div>
 
                 <h3 className="text-lg font-semibold mb-2">Julia Smitjes</h3>
-                <p className="text-sm text-muted-foreground mb-4">IT lover and coffee addict — Utrecht</p>
+                <p className="text-sm text-muted-foreground mb-4">IT lover and coffee addict</p>
 
                 <div className="w-full divide-y divide-border/30">
                   <div className="py-3 flex items-center justify-between">
@@ -142,11 +141,14 @@ export default function Contact() {
                   </div>
 
                   <div className="py-3 flex items-center justify-center gap-4">
-                    <a href="#" aria-label="Github" className="hover:text-primary transition-colors">
+                    <a href="https://github.com/Juliasmitjes" aria-label="Github" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors">
                       <Github size={20} />
                     </a>
-                    <a href="#" aria-label="LinkedIn" className="hover:text-primary transition-colors">
-                      <Linkedin size={20} />
+                    <a href="tel:+31614292489" aria-label="Phone" className="hover:text-primary transition-colors">
+                      <Phone size={20} />
                     </a>
                     <a href="mailto:julia.s@live.nl" aria-label="Email" className="hover:text-primary transition-colors">
                       <Mail size={20} />

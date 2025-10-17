@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Phone, Mail } from "lucide-react";
 import heroImage from "../assets/hero-image.jpg";
 
 const Hero = () => {
@@ -55,13 +55,31 @@ const Hero = () => {
       </div>
 
       <div className="flex gap-6 mt-10">
-        <a href="#" className="hover:text-primary transition-colors"><Github size={22} /></a>
-        <a href="#" className="hover:text-primary transition-colors"><Linkedin size={22} /></a>
-        <a href="#" className="hover:text-primary transition-colors"><Mail size={22} /></a>
-      </div>
-    </div>
+          <a
+            href="https://github.com/Juliasmitjes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+          >
+            <Github size={22} />
+          </a>
 
-    {/* Right column — visual / animation */}
+          <a
+            href="tel:+31614292489"
+            className="hover:text-primary transition-colors"
+          >
+            <Phone size={22} />
+          </a>
+
+          <a
+            href="mailto:julia.s@live.nl"
+            className="hover:text-primary transition-colors"
+          >
+            <Mail size={22} />
+          </a>
+        </div>
+      </div>
+
     <div className="flex-1 relative">
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       <img
@@ -72,7 +90,6 @@ const Hero = () => {
     </div>
   </div>
 </section>
-
   );
 };
 

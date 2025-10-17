@@ -33,7 +33,7 @@ function App() {
       </main>
       
       <footer className="py-8 text-center text-muted-foreground border-t bg-background border-border/50">
-        <p>&copy; {currentYear} Built with React & TypeScript.</p>
+        <p>&copy; {currentYear} Built with React & TypeScript</p>
       </footer>
     </div>
   );
