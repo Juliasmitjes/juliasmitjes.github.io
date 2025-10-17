@@ -7,6 +7,8 @@ import { motion } from 'motion/react';
 import juliaSmitjes from '../assets/juliaSmitjes.jpg';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -22,14 +24,15 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          toast.success('Thank you for your message! I’ll get back to you soon.');
+          form.current?.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);
+          toast.error('Something went wrong. Please try again later.');
         },
       );
     }
-  
 
   return (
     <section id="contact" className="py-20 px-4 bg-background text-foreground">
@@ -180,6 +183,17 @@ export default function Contact() {
             </Card>
           </motion.aside>
         </div>
+
+        <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        theme="light"
+      />
+
       </div>
     </section>
   );
