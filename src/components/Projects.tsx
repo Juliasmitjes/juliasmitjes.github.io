@@ -88,11 +88,11 @@ const Projects = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           </div>
 
-          <div className="absolute inset-0 flex flex-col justify-end p-8 text-left backdrop-blur-[8px] transition-all duration-500 group-hover:backdrop-blur-[6px]">
+          <div className="absolute inset-0 flex flex-col justify-end p-8 text-left backdrop-blur-[8px] transition-all duration-500 group-hover:backdrop-blur-[6px] ">
             <h3 className="text-2xl font-bold mb-2 text-foreground text-glow">
               {project.title}
             </h3>
-            <p className="text-foreground text-sm mb-4 line-clamp-3">
+            <p className="hidden sm:block text-foreground text-sm mb-4 line-clamp-3">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-5">
