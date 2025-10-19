@@ -103,7 +103,7 @@ const Skills = () => {
     </div>
   </div>
 
-    <div className="absolute bottom-0 left-0 w-full h-100 bg-gradient-to-b from-transparent via-background/50 to-background" />
+    <div className="absolute bottom-0 left-0 w-full h-400 bg-gradient-to-b from-transparent via-background/50 to-background" />
 </section>
   );
 };

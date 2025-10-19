@@ -9,6 +9,7 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
+import contactImage from "../assets/contact-image.jpg";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -35,8 +36,18 @@ export default function Contact() {
     }
 
   return (
-    <section id="contact" className="py-20 px-4 bg-background text-foreground">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="py-20 px-4 text-foreground relative min-h-screen overflow-hidden bg-background ">
+
+
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30 z-0"
+        style={{ backgroundImage: `url(${contactImage})` }}
+      />
+
+  <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-transparent" />
+
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.header
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}

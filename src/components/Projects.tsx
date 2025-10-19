@@ -53,7 +53,7 @@ const Projects = () => {
   className="relative overflow-hidden bg-backgroundTwo text-foreground py-36 px-6"
 >
 
-  <div className="absolute top-0 left-0 w-full h-48 overflow-hidden">
+  <div className="absolute top-0 left-0 w-full h-400 overflow-hidden">
   <div className="absolute inset-0 bg-gradient-to-b from-background via-backgroundTwo/70 to-transparent opacity-100" />
   </div>
 
