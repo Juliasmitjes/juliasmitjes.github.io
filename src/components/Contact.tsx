@@ -194,17 +194,6 @@ export default function Contact() {
             </Card>
           </motion.aside>
         </div>
-
-        <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-        theme="light"
-      />
-
       </div>
     </section>
   );
