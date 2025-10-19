@@ -58,6 +58,7 @@
 
 @layer base {
   :root {
+    
     --background: 240 10% 3.9%;
     --backgroundTwo: 227 22% 8%;
     --foreground: 0 0% 98%;
@@ -115,8 +116,11 @@
   }
 }
 
+@theme {
+  --background: oklch(0.18 0.008 258);
+  --backgroundTwo: oklch(0.26 0.027 255);
+  --foreground: oklch(0.98 0.002 95);
 
-@theme inline {
 --color-background: hsl(var(--background));
 --color-backgroundTwo: hsl(var(--backgroundTwo));
 --color-foreground: hsl(var(--foreground));

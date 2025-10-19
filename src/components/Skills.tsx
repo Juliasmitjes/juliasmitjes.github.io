@@ -3,6 +3,7 @@ import { Badge } from "./ui/badge";
 import { Code, Palette, Zap, Database  } from "lucide-react";
 import { motion } from 'motion/react';
 
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -32,7 +33,7 @@ const Skills = () => {
   ];
 
   return (
-   <section className="relative py-24 px-6 overflow-hidden bg-background">
+   <section className="relative py-24 px-6 overflow-hidden bg-backgroundTwo">
   {/* Decorative background elements */}
   <div className="absolute inset-0 pointer-events-none">
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-b from-primary/10 to-transparent rounded-full blur-3xl opacity-30" />
@@ -47,7 +48,7 @@ const Skills = () => {
       </h2>
   
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-        My toolkit for creating modern websites.
+        My toolkit for creating modern websites
       </p>
     </div>
 
@@ -101,6 +102,8 @@ const Skills = () => {
       )}
     </div>
   </div>
+
+    <div className="absolute bottom-0 left-0 w-full h-100 bg-gradient-to-b from-transparent via-background/50 to-background" />
 </section>
   );
 };

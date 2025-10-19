@@ -48,100 +48,101 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-24 px-4 bg-backgroundTwo overflow-hidden">
+   <section
+  id="projects"
+  className="relative overflow-hidden bg-backgroundTwo text-foreground py-36 px-6"
+>
 
-  <div className="max-w-6xl mx-auto">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl md:text-5xl text-foreground font-bold mb-6 text-glow">
-        Recent Creations
-      </h2>
+  <div className="absolute top-0 left-0 w-full h-48 overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-b from-background via-backgroundTwo/70 to-transparent opacity-100" />
+  </div>
 
-      <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-        A curated showcase of recent work. User-friendly, interactive, and modern.
-      </p>
-    </div>
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-    {/* Grid */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+  </div>
+
+  <div className="relative z-10 max-w-6xl mx-auto text-center">
+    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-glow">
+      Recent Creations
+    </h2>
+    <p className="text-lg md:text-xl text-muted-foreground mb-20 max-w-2xl mx-auto animate-fadeInUp opacity-90">
+      A showcase of recent projects
+    </p>
+
+  
+    <div
+      className="grid grid-cols-1 lg:grid-cols-2 gap-10 animate-fadeInUp"
+      style={{ animationDelay: "0.3s" }}
+    >
       {projects.map((project, index) => (
         <article
           key={index}
-          className="group relative overflow-hidden rounded-2xl p-0 shadow-lg transition-transform duration-500 hover:-translate-y-2 text-start"
-          aria-labelledby={`proj-${index}-title`}
+          className="group relative rounded-3xl overflow-hidden shadow-2xl transition-transform duration-700 hover:-translate-y-3 hover:shadow-primary/30"
         >
-     
-          <div className="rounded-2xl bg-gradient-to-tr from-primary/5 via-transparent to-accent/5 p-[1px]">
-            <Card className="relative overflow-hidden rounded-2xl bg-card/60 backdrop-blur-sm border border-border/40 p-0">
-              <div className="md:flex">
-                {/* Left: Image (desktop) */}
-                <div className="relative md:w-1/2 h-56 md:h-[320px] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className={`w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105 ${
-                      project.adjustObject ? "object-[10%]" : ""}`} />
-        
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+          <div className="relative">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-64 md:h-[340px] object-cover transform transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          </div>
 
-                 
+          <div className="absolute inset-0 flex flex-col justify-end p-8 text-left backdrop-blur-[8px] transition-all duration-500 group-hover:backdrop-blur-[6px]">
+            <h3 className="text-2xl font-bold mb-2 text-foreground text-glow">
+              {project.title}
+            </h3>
+            <p className="text-foreground text-sm mb-4 line-clamp-3">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.technologies.slice(0, 6).map((tech, tIdx) => (
+                <Badge
+                  key={tIdx}
+                  variant="outline"
+                  className="text-xs border-foreground/20 text-foreground/80"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
 
-                  <div className="absolute left-0 right-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-in-out">
-                    <div className="backdrop-blur-sm bg-background/60 p-3 flex items-center justify-between">
-                      <div className="text-xs text-muted-foreground">
-                        <div className="font-medium text-foreground">{project.title}</div>
-                      </div>
-                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground">
-                          View →
-                        </a>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex gap-3">
+              <Button
+                size="sm"
+                asChild
+                className="shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <ExternalLink size={14} />
+                  Live Demo
+                </a>
+              </Button>
 
-                {/* Right: Content */}
-                <div className="md:w-1/2 p-6 flex flex-col justify-between">
-                  <div>
-                    <h3 id={`proj-${index}-title`} className="text-lg md:text-xl font-semibold text-foreground mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 6).map((tech, tIdx) => (
-                        <Badge key={tIdx} variant="outline" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between gap-3 mt-3">
-                    <div className="flex gap-3">
-                      <Button size="sm" asChild className="shadow-sm">
-                        <a href={project.demoUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                          <ExternalLink size={14} />
-                          Live Demo
-                        </a>
-                      </Button>
-
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                          <Github size={14} />
-                          Code
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div> {/* md:flex */}
-            </Card>
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Github size={14} />
+                  Code
+                </a>
+              </Button>
+            </div>
           </div>
         </article>
       ))}
     </div>
   </div>
 </section>
+
 
   );
 };
