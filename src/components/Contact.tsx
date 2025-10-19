@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
 import juliaSmitjes from '../assets/juliaSmitjes.jpg';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import contactImage from "../assets/contact-image.jpg";
 
