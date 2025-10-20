@@ -10,7 +10,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Art Website",
-      description: "A modern website for an art brand, featuring product listings, a contact form, and the ability to place orders.",
+      description: "A modern website for an art brand, featuring product listings, an about me page and a contact form.",
       technologies: ["React", "Next.js", "Typescript", "Tailwind", "Vercel", "PostgreSQL" ],
       image: websiteLicht,
       adjustObject: true,
