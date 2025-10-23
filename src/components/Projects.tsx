@@ -14,7 +14,7 @@ const Projects = () => {
       technologies: ["React", "Next.js", "Typescript", "Tailwind", "Vercel", "PostgreSQL" ],
       image: websiteLicht,
       adjustObject: true,
-      demoUrl: "https://lichtsculpturen.vercel.app/",
+      demoUrl: "https://www.lumenarte.nl/",
       githubUrl: "https://github.com/Juliasmitjes/12-websitenextgoede"
     },
     {
